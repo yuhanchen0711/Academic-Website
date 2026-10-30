@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuhan Chen | University of Michigan</title>
+
+    <style>
+        :root {
+            --blue: #164c89;
+            --text: #202936;
+            --muted: #556174;
+            --border: #d8dee6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: white;
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 930px;
+            margin: auto;
+            padding: 60px 40px;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profile */
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 34px;
+        }
+
+        .profile img {
+            width: 187px;
+            height: 221px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            background: #f4f7fb;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0 0 5px;
+            line-height: 1.25;
+        }
+
+        .affiliation {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.6;
+            margin: 0 0 15px;
+        }
+
+        .contact-line {
+            margin: 3px 0;
+        }
+
+        .profile-links {
+            margin-top: 12px;
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 30px;
+            padding: 14px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: bold;
+        }
+
+        /* Content */
+        section {
+            margin-top: 35px;
+            scroll-margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #172840;
+            margin: 0 0 12px;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .paper-title {
+            font-weight: bold;
+        }
+
+        .paper-authors {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .paper-venue {
+            color: #39495f;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 45px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: #737f8d;
+            font-size: 13px;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 620px) {
+            .container {
+                padding: 28px 23px;
+            }
+
+            .profile {
+                gap: 18px;
+            }
+
+            .profile img {
+                width: 114px;
+                height: 141px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .affiliation {
+                font-size: 14px;
+            }
+
+            .contact-line,
+            .profile-links {
+                font-size: 13px;
+                overflow-wrap: anywhere;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .profile {
+                flex-direction: column;
+            }
+
+            .profile img {
+                width: 145px;
+                height: 172px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Profile -->
+    <header class="profile">
+
+        <!-- Replace headshot.jpg with your own photo -->
+        <img src="headshot.jpg"
+             alt="Yuhan Chen headshot">
+
+        <div class="profile-info">
+            <h1>Yuhan Chen</h1>
+
+            <p class="affiliation">
+                Ph.D. Student<br>
+                Computer Science and Engineering<br>
+                University of Michigan
+            </p>
+
+            <p class="contact-line">
+                <strong>Email:</strong>
+                <a href="mailto:cyhalek@umich.edu">
+                    cyhalek@umich.edu
+                </a>
+            </p>
+
+            <p class="contact-line">
+                <strong>Location:</strong>
+                Ann Arbor, Michigan
+            </p>
+
+            <p class="profile-links">
+                <a href="cv.pdf">CV</a> |
+                <a href="https://github.com/yuhanchen0711">
+                    GitHub
+                </a> |
+                <a href="https://scholar.google.com/scholar?q=Yuhan+Chen+ElyteOS">
+                    Google Scholar Search
+                </a>
+            </p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="cv.pdf">CV</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Me -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I am a Ph.D. student in Computer Science
+            and Engineering at the University of Michigan.
+            My research lies at the intersection of
+            <strong>computer systems, artificial intelligence
+            for science, and laboratory automation</strong>.
+            I am particularly interested in designing the
+            software infrastructure that connects AI agents
+            to physical experiments, enabling autonomous
+            laboratories to operate reliably and efficiently.
+        </p>
+
+        <p>
+            My work draws on research in automated battery
+            electrolyte characterization, scientific
+            instrumentation, and AI-driven experimental
+            planning. My long-term goal is to make scientific
+            laboratories more programmable, accessible,
+            and reproducible, so researchers and AI systems
+            can move from hypotheses to experimental
+            evidence more effectively.
+        </p>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+        <h2>Research</h2>
+
+        <p>
+            My current projects focus on building the
+            systems foundations of autonomous scientific
+            discovery.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Experiment-as-Code Laboratories.</strong>
+                I explore declarative abstractions for
+                laboratory experiments, separating scientific
+                intent from device-specific control logic.
+                This approach enables validation, resource
+                management, scheduling, and reproducible
+                execution across heterogeneous instruments.
+
+                <a href="https://arxiv.org/abs/2605.04375">
+                    [Paper]
+                </a>
+            </li>
+
+            <li>
+                <strong>AI Agents for Autonomous Experimentation.</strong>
+                I develop agent-based workflows that translate
+                natural-language scientific objectives into
+                experimental plans, verify feasibility,
+                coordinate instruments, monitor execution,
+                and use measurement results to inform
+                subsequent experiments.
+
+                <a href="https://github.com/BattModels/ElyteAgent">
+                    [Code]
+                </a>
+            </li>
+
+            <li>
+                <strong>Self-Driving Laboratories for
+                Battery Electrolytes.</strong>
+                I have contributed to <em>ElyteOS</em>,
+                a Python-based platform for experiment control
+                and data management, and <em>SALSA</em>,
+                a modular system for automated salt-solubility
+                measurements. Together, these tools support
+                more flexible and data-driven electrolyte
+                research.
+
+                <a href="https://doi.org/10.1016/j.softx.2026.102565">
+                    [ElyteOS]
+                </a>
+
+                <a href="https://doi.org/10.1039/D5DD00516G">
+                    [SALSA]
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <ol>
+            <li>
+                <a class="paper-title"
+                   href="https://doi.org/10.1016/j.softx.2026.102565">
+                    ElyteOS: Software for Automated Electrolyte
+                    Preparation, Measurement, and Data Management.
+                </a>
+
+                <div class="paper-authors">
+                    <strong>Yuhan Chen</strong>,
+                    Hongyi Lin, Tianyi Zhang, Adarsh Dave,
+                    Jared Mitchell, Jay Whitacre, and
+                    Venkatasubramanian Viswanathan.
+                </div>
+
+                <div class="paper-venue">
+                    <em>SoftwareX</em>, 34, 102565, 2026.
+                    <a href="https://doi.org/10.1016/j.softx.2026.102565">
+                        [DOI]
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://doi.org/10.1039/D5DD00516G">
+                    SALSA: A Low-Cost Self-Driving Lab Modular
+                    Add-On for Salt Solubility Assessment for
+                    Battery Electrolytes.
+                </a>
+
+                <div class="paper-authors">
+                    Tianyi Zhang, Hongyi Lin,
+                    <strong>Yuhan Chen</strong>, and
+                    Venkatasubramanian Viswanathan.
+                </div>
+
+                <div class="paper-venue">
+                    <em>Digital Discovery</em>,
+                    5, 1881–1887, 2026.
+                    <a href="https://doi.org/10.1039/D5DD00516G">
+                        [DOI]
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://arxiv.org/abs/2605.04375">
+                    Experiment-as-Code Labs: A Declarative
+                    Stack for AI-Driven Scientific Discovery.
+                </a>
+
+                <div class="paper-authors">
+                    Zhenning Yang, <strong>Yuhan Chen</strong>,
+                    Patrick Tser Jern Kon, Tongyuan Miao,
+                    Hongyi Lin, Venkat Viswanathan,
+                    Danai Koutra, and Ang Chen.
+                </div>
+
+                <div class="paper-venue">
+                    arXiv preprint arXiv:2605.04375, 2026.
+                    <a href="https://arxiv.org/abs/2605.04375">
+                        [Paper]
+                    </a>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            Computer Science and Engineering<br>
+            University of Michigan<br>
+            Ann Arbor, MI, USA
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:cyhalek@umich.edu">
+                cyhalek@umich.edu
+            </a>
+            <br>
+
+            GitHub:
+            <a href="https://github.com/yuhanchen0711">
+                github.com/yuhanchen0711
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        Last updated: October 2026
+    </footer>
+
+</div>
+</body>
+</html>
